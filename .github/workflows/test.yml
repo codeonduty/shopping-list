@@ -1,0 +1,24 @@
+# test.yml
+
+name: Test
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: codecov/codecov-action@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16
+      - name: Install dependencies (client and server)
+        run: npm run install-all
+      - name: Run tests
+        run: npm run test
+      - name: Download Codecov
+        run: curl -Os https://uploader.codecov.io/latest/linux/codecov
+      - name: Install Codecov
+        run: chmod +x codecov
+      - name: Generate code coverage
+        run: ./codecov
+# test.yml
