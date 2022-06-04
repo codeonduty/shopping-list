@@ -1,27 +1,15 @@
-# shopping-list
+<div align="center">
+  <br>
+  <h1>Shopping List</h1>
+  <em>
+    A Grocery Shopping List.
+  </em>
+</div>
 
-## Install dependencies for server
+<br>
 
-### `npm install`
-
-## Install dependencies for client
-
-### cd client ---> `npm install`
-
-## Connect to your mongodb and add info in .env
-
-## Add your paypal client id in client/src/components/mainpages/cart/PaypalButton.js
-
-## Run the client & server with concurrently
-
-### `npm run dev`
-
-## Run the Express server only
-
-### `npm run server`
-
-## Run the React client only
-
-### `npm run client`
-
-### Server runs on http://localhost:5000 and client on http://localhost:3000
+<div align='center'>
+  <a href='https://github.com/codeonduty/shopping-list/actions/workflows/test.yml'>
+    <img src='https://github.com/codeonduty/shopping-list/actions/workflows/test.yml/badge.svg?branch=main&event=push'
+  </a>
+</div>
