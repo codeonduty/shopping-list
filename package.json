@@ -9,8 +9,9 @@
     "client": "cd client && npm run start",
     "server-install": "npm install",
     "client-install": "cd client && npm install",
-    "install-all": "concurrently \"npm run server-install\" \"npm run client-install\"",
+    "install-all": "npm run server-install && npm run client-install",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "test": "jest --verbose --coverage",
     "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "keywords": [],
@@ -30,6 +31,8 @@
     "react-switch": "^6.0.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "jest": "^28.1.0",
+    "nodemon": "^2.0.4",
+    "supertest": "^6.2.3"
   }
 }
