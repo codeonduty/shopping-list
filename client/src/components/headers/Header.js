@@ -3,15 +3,14 @@ import { GlobalState } from "../../GlobalState";
 import Menu from "./icon/menu.svg";
 import Close from "./icon/close.svg";
 import Cart from "./icon/cart.svg";
-import Heart from "./icon/heart.svg";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
 function Header() {
   const state = useContext(GlobalState);
-  const [isLogged] = state.userAPI.isLogged;
-  const [isAdmin] = state.userAPI.isAdmin;
-  const [cart] = state.userAPI.cart;
+  const [isLogged] = state.userAPI.isLogged; //this checks if the user is logged in
+  const [isAdmin] = state.userAPI.isAdmin; //this checks if the user is an admin
+  const [cart] = state.userAPI.cart; //this gets the logged in users cart information
   const [menu, setMenu] = useState(false);
 
   const logoutUser = async () => {
@@ -19,10 +18,11 @@ function Header() {
 
     localStorage.removeItem("firstLogin");
 
-    window.location.href = "/";
+    window.location.href = "/"; //this logs out the use
   };
 
   const adminRouter = () => {
+    //this checks if the user is an admin
     return (
       <>
         <li>
@@ -32,7 +32,7 @@ function Header() {
           <Link to="/category">Categories</Link>
         </li>
       </>
-    );
+    ); //this allows the admin to change the product categories and create new products to add to the website
   };
 
   const loggedRouter = () => {
@@ -51,9 +51,15 @@ function Header() {
   };
 
   const styleMenu = {
+    //this creates a new menu when its minimum
     left: menu ? 0 : "-100%",
   };
-
+  /*
+this changes the title between the website name and admin
+alines the header well and makes it clean
+this also changes between logged in and login/register
+makes the header responsive
+ */
   return (
     <header>
       <div className="menu" onClick={() => setMenu(!menu)}>
@@ -98,17 +104,6 @@ function Header() {
           </Link>
         </div>
       )}
-
-      {/*{isAdmin ? (
-        ""
-      ) : (
-        <div className="cart-icon">
-          <span>{cart.length}</span>
-          <Link to="/cart">
-            <img src={Heart} alt="" width="30" />
-          </Link>
-        </div>
-      )}*/}
     </header>
   );
 }
