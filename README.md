@@ -17,7 +17,7 @@
     React’s official Redux binding, React-Redux is updated with any modifications in API from both libraries to make sure that the React components behave
     expectedly. Me and my team face some challenges connecting the front and the back-end. This was mainly because of difference in operating systems and the
     hardships of understanding how to connect the two ends. In future, we are hoping to make the website even more user friendly and add some features related to AI
-    which will recommend products based on other sites you visit.
+    which will recommend products based on other sites you visit.  
     
     How to use the project: This is an easy to run project, you only need to click on the website's url, create an account with us, then log in and let the wishing
     begin!
