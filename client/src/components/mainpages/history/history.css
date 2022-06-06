@@ -5,18 +5,29 @@
     text-align: center;
     margin: 20px;
     text-transform: uppercase;
+    color:rgb(3, 165, 206);
     letter-spacing: 1.2px;
 }
 .history-page table{
     margin: auto;
     width: 100%;
 }
+
 .history-page table,th,tr,td{
-    border: 1px solid #ddd;
+    border: 2px solid #ddd;
     border-collapse: collapse;
+}
+#light .history-page table,th,tr,td{
+    border: 2px solid rgb(3, 165, 206);
+    background-color: rgb(255, 255, 255);
+}
+#dark .history-page table,th,tr,td{
+    border: 2px solid rgb(72, 84, 87);
+    background-color: rgb(24, 27, 28);
 }
 th, td{
     text-align: center;
+    color:rgb(3, 165, 206);
     padding: 10px;
     text-transform: capitalize;
 }

@@ -13,7 +13,7 @@ header .logo {
 }
 header a {
   text-transform: uppercase;
-  color: teal;
+  color: rgb(20, 170, 220);
 }
 header ul li {
   display: inline-block;
@@ -31,7 +31,7 @@ header ul li:hover {
   margin-right: 20px;
 }
 .cart-icon span {
-  background: crimson;
+  background: rgb(20, 170, 220);
   border-radius: 20px;
   color: white;
   position: absolute;

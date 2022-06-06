@@ -1,10 +1,21 @@
 .login-page {
   max-width: 500px;
-  border: 2px solid rgb(3, 165, 206);
-  border-radius: 5px;
+  border-radius: 15px;
+  border-width: 0px;
   padding: 30px;
   margin: 50px auto;
 }
+
+#light .login-page {
+  border: 2px solid rgb(3, 165, 206);
+  background-color: rgb(255, 255, 255);
+}
+
+#dark .login-page {
+  border: 2px solid rgb(72, 84, 87);
+  background-color: rgb(24, 27, 28);
+}
+
 .login-page h2 {
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -16,9 +27,16 @@
   height: 40px;
   margin: 10px 0;
   padding: 0 5px;
-  outline: rgb(3, 165, 206);
+}
+
+#light .login-page form button{
   border: 1px solid rgb(3, 165, 206);
 }
+
+#dark .login-page form button{
+  border: 1px solid rgb(70, 69, 68);
+}
+
 .login-page form .row {
   display: flex;
   justify-content: space-between;
@@ -26,13 +44,24 @@
 }
 .login-page form button {
   width: 150px;
-  background: rgb(3, 165, 206);
+  
   color: white;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
+
+#light .login-page form button
+{
+  background: rgb(3, 165, 206);
+}
+
+#dark .login-page form button
+{
+  background: rgb(34, 169, 193);
+}
+
 .login-page form a {
-  color: red;
+  color: rgb(124, 111, 111);
   letter-spacing: 1.3px;
   text-transform: uppercase;
 }

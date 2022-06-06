@@ -1,7 +1,14 @@
 .cart{
     position: relative;
-    border: 1px solid #ccc;
     transform: scaleY(0.98);
+}
+#light .cart{
+    border: 2px solid rgb(3, 165, 206);
+    background-color: rgb(255, 255, 255);
+}
+#dark .cart{
+    border: 2px solid rgb(72, 84, 87);
+    background-color: rgb(24, 27, 28);
 }
 .amount span{
     color: crimson;
@@ -16,9 +23,15 @@
     position: absolute;
     top:0;
     right: 5px;
-    color: crimson;
+  
     font-weight: 900;
     cursor: pointer;
+}
+#light .delete{
+    color: rgb(8, 191, 211);
+}
+#dark .delete{
+    color: rgb(153, 133, 137)
 }
 .total{
     width: 100%;
@@ -26,7 +39,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    color:rgb(189, 5, 5);
 }
 .total h3{
-    color: crimson;
+ 
+}
+#light .total h3{
+    color: rgb(189, 5, 5);
+}
+
+#dark .total h3{
+    color:  rgb(189, 5, 5);
 }
